@@ -8,12 +8,29 @@ import {
     Text,
     Image,
     TouchableOpacity,
+    PixelRatio,
+    TextInput,
 } from 'react-native';
+import ImagePicker from 'react-native-image-picker';
+let lineHeight = 1 / PixelRatio.get();
 
+var options = {
+    title: '选择作品',
+    takePhotoButtonTitle: '拍照',
+    chooseFromLibraryButtonTitle: '从相册中选取',
+    cancelButtonTitle: '取消',
+    storageOptions: {
+        skipBackup: true,
+        path: 'images'
+    }
+};
 export default class AddProduct extends Component {
 
     constructor(props) {
         super(props);
+        this.state={
+            avatarSource: require('./res/add.png'),
+        }
     }
 
     _publish(action) {
@@ -26,6 +43,23 @@ export default class AddProduct extends Component {
         else {
             alert("发布作品");
         }
+    }
+
+    _addProduct(action){
+
+        ImagePicker.showImagePicker(options, (response) => {
+            if (response.didCancel) {
+            }
+            else if (response.error) {
+            }
+            else {
+                // const source = {uri: 'data:image/jpeg;base64,' + response.data, isStatic: true};
+                const source = {uri: response.uri, isStatic: true};
+                this.setState({
+                    avatarSource: source,
+                });
+            }
+        });
     }
 
     render() {
@@ -52,8 +86,33 @@ export default class AddProduct extends Component {
                 </View>
 
                 <View style={styles.product_content_image_root}>
-                    <Image style={styles.product_content_image} source={require('./res/add.png')}/>
+                    <TouchableOpacity onPress={this._addProduct.bind(this, 0)}>
+                    <Image style={styles.product_content_image} source={this.state.avatarSource}/>
+                    </TouchableOpacity>
                 </View>
+                <View style={styles.line}/>
+                <View style={styles.product_content_name_root}>
+                    <Text style={styles.product_content_name_tag}>作品名称</Text>
+                    <TextInput style={styles.product_content_name_value} placeholder={'必填'}
+                               underlineColorAndroid={'transparent'}
+                               placeholderTextColor={'#ADADAD'}/>
+                </View>
+                <View style={styles.line}/>
+
+                <View style={styles.product_content_age_root}>
+                    <Text style={styles.product_content_age_tag}>作品创作年龄</Text>
+                    <TextInput style={styles.product_content_age_value} placeholder={'必填, 数字'}
+                               underlineColorAndroid={'transparent'} keyboardType={'numeric'}
+                               placeholderTextColor={'#ADADAD'}/>
+                </View>
+                <View style={styles.line}/>
+                <View style={styles.product_content_description_root}>
+                    <TextInput style={styles.product_content_description }
+                               placeholder={'作品描述 (选填, 50字以内)'}
+                               underlineColorAndroid={'transparent'}
+                               placeholderTextColor={'#ADADAD'}/>
+                </View>
+
 
             </View>
 
@@ -70,7 +129,7 @@ const styles = StyleSheet.create({
     product_title_root: {
         flexDirection: 'row',
         height: 50,
-        backgroundColor: '#FFD700',
+        backgroundColor: '#FFC125',
         alignItems: 'center',
     },
     product_title_cancel: {
@@ -100,12 +159,64 @@ const styles = StyleSheet.create({
         width: 50,
         alignSelf: 'flex-start',
     },
-    product_content_image_root:{
-        flex:1,
+    product_content_image_root: {
+        height: 120,
+        justifyContent: 'center',
     },
-    product_content_image:{
-        width:100,
-        height:100,
+    product_content_image: {
+        width: 100,
+        height: 100,
+    },
+    line: {
+        height: lineHeight,
+        backgroundColor: '#ADADAD',
+        marginLeft: 5,
+        marginRight: 5,
+    },
+    product_content_name_root: {
+        flexDirection: 'row',
+        height: 50,
+        alignItems: 'center',
+    },
+    product_content_name_tag: {
+        fontSize: 18,
+        flex: 1,
+        marginLeft: 10,
+    },
+    product_content_name_value: {
+        fontSize: 18,
+        alignSelf: 'flex-end',
+        width: 100,
+        color: 'grey',
+        textAlign:'right',
+
+    },
+
+    product_content_age_root: {
+        flexDirection: 'row',
+        height: 50,
+        alignItems: 'center',
+    },
+    product_content_age_tag: {
+        fontSize: 18,
+        flex: 1,
+        marginLeft: 10,
+    },
+    product_content_age_value: {
+        fontSize: 18,
+        alignSelf: 'flex-end',
+        width: 100,
+        color: 'grey',
+        textAlign:'right',
+    },
+    product_content_description_root: {
+        flex: 1,
+    },
+    product_content_description: {
+        fontSize: 18,
+        color: 'grey',
+        marginLeft: 5,
+
     },
 
 

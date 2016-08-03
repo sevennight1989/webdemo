@@ -22,6 +22,9 @@ var API_URL = 'http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_the
 var PAGE_SIZE = 25;
 var PARAMS = '?apikey=' + API_KEY + '&page_limit=' + PAGE_SIZE;
 var REQUEST_URL = API_URL + PARAMS;
+
+var MDATA= ['row1','row2','row3','row4','row5','row6','row7','row8','row9','row10','row11','row12','row13','row14','row15','row16','row17','row18','row19','row20','row21','row22','row23','row24',];
+
 export default  class Main extends Component {
 
     constructor(props) {
@@ -32,12 +35,15 @@ export default  class Main extends Component {
                 rowHasChanged: (row1, row2) => row1 !== row2,
             }),
             loaded: false,
+            movementDataSource:new ListView.DataSource({
+                rowHasChanged: (row1, row2) => row1 !== row2,
+            }),
         };
     }
 
     componentDidMount() {
         this.setData();
-
+        this.setMovementData();
     }
 
     setData() {
@@ -52,14 +58,21 @@ export default  class Main extends Component {
             .done();
     }
 
+
+    setMovementData(){
+        this.setState({
+            movementDataSource: this.state.dataSource.cloneWithRows(MDATA),
+        });
+    }
+
     _renderTitleIndicator() {
         return <PagerTitleIndicator titles={['精选展示', '最近更新']}/>;
     }
 
 
-    _onPressButton(id,movie){
+    _onPressButton(id, movie) {
         this.props.navigator.push({
-            name:'ProductPreview',
+            name: 'ProductPreview',
             component: ProductPreview,
             params: {
                 id: id,
@@ -68,12 +81,12 @@ export default  class Main extends Component {
         });
     }
 
-    _addProduct(action){
-        if(action==0){
+    _addProduct(action) {
+        if (action == 0) {
             alert("搜索");
-        }else{
+        } else {
             this.props.navigator.push({
-                name:'AddProduct',
+                name: 'AddProduct',
                 component: AddProduct,
             });
         }
@@ -91,7 +104,7 @@ export default  class Main extends Component {
                 </View>
                 <Text style={styles.gallery_item_date} numberOfLines={1}>2016-02-01</Text>
             </View>
-            <TouchableOpacity onPress={this._onPressButton.bind(this,rowID,movie)}>
+            <TouchableOpacity onPress={this._onPressButton.bind(this, rowID, movie)}>
                 <Image style={styles.gallery_item_product} source={require('./res/zuoping.jpg')}/>
             </TouchableOpacity>
 
@@ -102,6 +115,12 @@ export default  class Main extends Component {
         </View>;
     }
 
+
+    rendorMovieMent(data,sectionDI, rowID){
+        return (<View style={styles.movement_list_item_root}>
+            <Text>{data}</Text>
+        </View>);
+    }
 
 
     render() {
@@ -114,11 +133,11 @@ export default  class Main extends Component {
 
                     <View style={styles.gallery_title_touch_parent}>
 
-                        <TouchableOpacity onPress={this._addProduct.bind(this,0)}>
-                        <Image style={styles.gallery_title_search} source={require('./res/search.png')}
-                               resizeMode={"stretch"}/>
-                            </TouchableOpacity>
-                        <TouchableOpacity onPress={this._addProduct.bind(this,1)}>
+                        <TouchableOpacity onPress={this._addProduct.bind(this, 0)}>
+                            <Image style={styles.gallery_title_search} source={require('./res/search.png')}
+                                   resizeMode={"stretch"}/>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={this._addProduct.bind(this, 1)}>
                             <Image style={styles.gallery_title_add} source={require('./res/add.png')}
                                    resizeMode={"stretch"}/>
                         </TouchableOpacity>
@@ -147,11 +166,11 @@ export default  class Main extends Component {
                     <Text style={styles.gallery_title_empty}></Text>
                     <Text style={styles.gallery_title_text}>小小画廊</Text>
                     <View style={styles.gallery_title_touch_parent}>
-                        <TouchableOpacity onPress={this._addProduct.bind(this,0)}>
+                        <TouchableOpacity onPress={this._addProduct.bind(this, 0)}>
                             <Image style={styles.gallery_title_search} source={require('./res/search.png')}
                                    resizeMode={"stretch"}/>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={this._addProduct.bind(this,1)}>
+                        <TouchableOpacity onPress={this._addProduct.bind(this, 1)}>
                             <Image style={styles.gallery_title_add} source={require('./res/add.png')}
                                    resizeMode={"stretch"}/>
                         </TouchableOpacity>
@@ -163,21 +182,28 @@ export default  class Main extends Component {
 
 
         var movementView = <View style={styles.container}>
-            <Text style={styles.welcome}>
-                活动
-            </Text>
+            <View style={styles.movement_title}>
+                <Text style={styles.movement_title_text}>活动</Text>
+            </View>
+            <ListView
+                dataSource={this.state.movementDataSource}
+                renderRow={this.rendorMovieMent.bind(this)}/>
         </View>
 
+
+
+
+
         var programView = <View style={styles.container}>
-            <Text style={styles.welcome}>
-                节目
-            </Text>
+            <View style={styles.program_title}>
+                <Text style={styles.program_title_text}>节目</Text>
+            </View>
         </View>
 
         var personalView = <View style={styles.container}>
-            <Text style={styles.welcome}>
-                个人专区
-            </Text>
+            <View style={styles.personal_title}>
+                <Text style={styles.personal_title_text}>个人专区</Text>
+            </View>
         </View>
 
 
@@ -188,8 +214,10 @@ export default  class Main extends Component {
                 <TabNavigator.Item
                     selected={this.state.selectedTab === 'gallery'}
                     title="小小画廊"
-                    renderIcon={() => <Image style={styles.gallery_bottom_icon} source={require('./res/tab_weixin_normal.png')}/>}
-                    renderSelectedIcon={() => <Image style={styles.gallery_bottom_icon} source={require('./res/tab_weixin_pressed.png')}/>}
+                    renderIcon={() => <Image style={styles.gallery_bottom_icon}
+                                             source={require('./res/tab_weixin_normal.png')}/>}
+                    renderSelectedIcon={() => <Image style={styles.gallery_bottom_icon}
+                                                     source={require('./res/tab_weixin_pressed.png')}/>}
                     onPress={() => this.setState({selectedTab: 'gallery'})}>
                     {GalleryView}
                 </TabNavigator.Item>
@@ -197,8 +225,10 @@ export default  class Main extends Component {
                 <TabNavigator.Item
                     selected={this.state.selectedTab === 'movement'}
                     title="活动"
-                    renderIcon={() => <Image style={styles.gallery_bottom_icon} source={require('./res/tab_address_normal.png')}/>}
-                    renderSelectedIcon={() => <Image style={styles.gallery_bottom_icon} source={require('./res/tab_address_pressed.png')}/>}
+                    renderIcon={() => <Image style={styles.gallery_bottom_icon}
+                                             source={require('./res/tab_address_normal.png')}/>}
+                    renderSelectedIcon={() => <Image style={styles.gallery_bottom_icon}
+                                                     source={require('./res/tab_address_pressed.png')}/>}
                     onPress={() => this.setState({selectedTab: 'movement'})}>
                     {movementView}
                 </TabNavigator.Item>
@@ -206,8 +236,10 @@ export default  class Main extends Component {
                 <TabNavigator.Item
                     selected={this.state.selectedTab === 'program'}
                     title="节目"
-                    renderIcon={() => <Image style={styles.gallery_bottom_icon} source={require('./res/tab_find_frd_normal.png')}/>}
-                    renderSelectedIcon={() => <Image style={styles.gallery_bottom_icon} source={require('./res/tab_find_frd_pressed.png')}/>}
+                    renderIcon={() => <Image style={styles.gallery_bottom_icon}
+                                             source={require('./res/tab_find_frd_normal.png')}/>}
+                    renderSelectedIcon={() => <Image style={styles.gallery_bottom_icon}
+                                                     source={require('./res/tab_find_frd_pressed.png')}/>}
                     onPress={() => this.setState({selectedTab: 'program'})}>
                     {programView}
                 </TabNavigator.Item>
@@ -215,8 +247,10 @@ export default  class Main extends Component {
                 <TabNavigator.Item
                     selected={this.state.selectedTab === 'personal'}
                     title="个人专区"
-                    renderIcon={() => <Image style={styles.gallery_bottom_icon} source={require('./res/tab_settings_normal.png')}/>}
-                    renderSelectedIcon={() => <Image style={styles.gallery_bottom_icon} source={require('./res/tab_settings_pressed.png')}/>}
+                    renderIcon={() => <Image style={styles.gallery_bottom_icon}
+                                             source={require('./res/tab_settings_normal.png')}/>}
+                    renderSelectedIcon={() => <Image style={styles.gallery_bottom_icon}
+                                                     source={require('./res/tab_settings_pressed.png')}/>}
                     onPress={() => this.setState({selectedTab: 'personal'})}>
                     {personalView}
                 </TabNavigator.Item>
@@ -252,15 +286,15 @@ const styles = StyleSheet.create({
         marginBottom: 5,
     },
 
-    gallery_bottom_icon:{
-        width:25,
-        height:25,
+    gallery_bottom_icon: {
+        width: 25,
+        height: 25,
     },
 
     gallery_title_root: {
         flexDirection: 'row',
         height: 50,
-        backgroundColor: '#FFD700',
+        backgroundColor: '#FFC125',
         alignItems: 'center',
     },
 
@@ -275,9 +309,9 @@ const styles = StyleSheet.create({
     },
 
     gallery_title_touch_parent: {
-        flexDirection:'row',
-        flex:1,
-        justifyContent:'flex-end',
+        flexDirection: 'row',
+        flex: 1,
+        justifyContent: 'flex-end',
     },
 
     gallery_title_search: {
@@ -345,5 +379,38 @@ const styles = StyleSheet.create({
 
     gallery_viewpager: {
         flex: 1,
+    },
+
+    movement_title: {
+        backgroundColor: '#FFC125',
+        height: 50,
+        justifyContent:'center',
+    },
+    movement_title_text: {
+        fontSize: 20,
+        textAlign: 'center',
+    },
+    program_title: {
+        backgroundColor: '#FFC125',
+        height: 50,
+        justifyContent:'center',
+    },
+    program_title_text: {
+        fontSize: 20,
+        textAlign: 'center',
+    },
+    personal_title: {
+        backgroundColor: '#FFC125',
+        height: 50,
+        justifyContent:'center',
+    },
+    personal_title_text: {
+        fontSize: 20,
+        textAlign: 'center',
+    },
+    movement_list_item_root:{
+        height :100,
+        alignItems:'center',
     }
+
 });
