@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/uiprj/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_035afd186377e98b07b3137c886543bd13539f5f.jar" />
+    </item>
+    <item
+        jar="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="2b8a01ad9da5d26d0067894c22e87597bca2c500">
+        <dex dex="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-0.11.0_fd13364e374a3e0aa8e025a842154aaabb84a403.jar" />
+    </item>
+    <item
+        jar="/home/uiprj/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.3/1a0113da2cab5f4c216b4e5e7c1dbfaa67087e14/jackson-core-2.2.3.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1a0113da2cab5f4c216b4e5e7c1dbfaa67087e14">
+        <dex dex="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/pre-dexed/debug/jackson-core-2.2.3_49e07aeb1df5b787ec64bb6e552842cff24ca570.jar" />
+    </item>
+    <item
+        jar="/home/uiprj/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.8.0/5ea7af56cc7c567ed9856d99efb30740e9b17ff/okio-1.8.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
+        <dex dex="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/pre-dexed/debug/okio-1.8.0_273dec953ad1cc9aedd8a0acc86c66a86553b9c0.jar" />
+    </item>
+    <item
+        jar="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d31aadf33187c37a7cd63dc1b769f8c6e33f78c3">
+        <dex dex="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-0.11.0_33f6acf639a4fbc5c71e1b20fd1ae2a06d8ccabc.jar" />
+    </item>
+    <item
+        jar="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_c23e3d533363dc763bd7f7dd4d5817f0603c738a.jar" />
+    </item>
+    <item
+        jar="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.30.0/jars/libs/infer-annotations-1.5.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="0bbd1350ccbd98c0648b9a8bd1242233847886ba">
+        <dex dex="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/pre-dexed/debug/infer-annotations-1.5_d055aab9afc3cdbf4f3e309163b5ce993809cc56.jar" />
+    </item>
+    <item
+        jar="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.1_efe2b0cb39fda0152092cfacf15b9c1162f76abd.jar" />
+    </item>
+    <item
+        jar="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.2.1_a4686e5af1c30666ff348e63c3ceb328641727dc.jar" />
+    </item>
+    <item
+        jar="/home/uiprj/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.2.0/f7873a2ebde246a45c2a8d6f3247108b4c88a879/okhttp-3.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f7873a2ebde246a45c2a8d6f3247108b4c88a879">
+        <dex dex="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/pre-dexed/debug/okhttp-3.2.0_af5f262e53795b494538dd3c8cbac5672ba4d2b4.jar" />
+    </item>
+    <item
+        jar="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3341b66c54367e777a0647e2db96c045329bfeab">
+        <dex dex="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-0.11.0_cd089824aa2c0284f25ea098e4dc32ad6fc3d246.jar" />
+    </item>
+    <item
+        jar="/home/uiprj/Downloads/tools/adt-bundle-linux-x86_64-20140702/sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.1_fdadf27ac73059ac3c175fed1fe54f42a229f721.jar" />
+    </item>
+    <item
+        jar="/home/uiprj/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_8d66e8cc763b7b781c60d1e3c1cffcd0783553f2.jar" />
+    </item>
+    <item
+        jar="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ca63c521b5745ae9a09629d7ca67ff6bc2a967fe">
+        <dex dex="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-0.11.0_4b27e7e50bdeca15ead8f7e442123305b45e60a0.jar" />
+    </item>
+    <item
+        jar="/home/uiprj/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.2.0/6f8a4b1435c9e0a6f9c5fe4a1be46627b848fd0c/okhttp-urlconnection-3.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6f8a4b1435c9e0a6f9c5fe4a1be46627b848fd0c">
+        <dex dex="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.2.0_0e27590ffa2ca14878e385dd571d950524494d38.jar" />
+    </item>
+    <item
+        jar="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
+        <dex dex="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.0.1_771c39a5365f594e80289105f815c64190879464.jar" />
+    </item>
+    <item
+        jar="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/exploded-aar/com.commit451/PhotoView/1.2.4/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="890be6e1e56a883c9b407a11e067a61886dec123">
+        <dex dex="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/pre-dexed/debug/com.commit451-PhotoView-1.2.4_6b22a86ab2b7030140bd889f8d86bc67b95d6178.jar" />
+    </item>
+    <item
+        jar="/home/uiprj/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/pre-dexed/debug/glide-3.7.0_fcba92578d88dfecf49042179f5e8b48a1c3561c.jar" />
+    </item>
+    <item
+        jar="/home/uiprj/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-ws/3.2.0/1ea229d6984444c8c58b8e97ba4c8429d9d135b3/okhttp-ws-3.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ea229d6984444c8c58b8e97ba4c8429d9d135b3">
+        <dex dex="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/pre-dexed/debug/okhttp-ws-3.2.0_be768974594cf6ff099f042c23a85fc05e693bd3.jar" />
+    </item>
+    <item
+        jar="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.30.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="b3e583f69ed6ccd7cc7f5fe75e41464ffafb8e17">
+        <dex dex="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.30.0_273568631aa75186d60705218816784dca2f5ff2.jar" />
+    </item>
+    <item
+        jar="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="98786c1770b531b9194fb6448b2a2692c64074b6">
+        <dex dex="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-0.11.0_a0c2445aebc3b7637fa345289a6287af579f60ec.jar" />
+    </item>
+    <item
+        jar="/home/uiprj/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/pre-dexed/debug/library-2.4.0_15cc46c71b7d15b5bb0e223b9f5fcf32fed67f96.jar" />
+    </item>
+    <item
+        jar="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1137942adeb03984c1311b662363dd38fc238fd3">
+        <dex dex="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-0.11.0_d5252dda165ac1fbd217f635107b9603cf0160d8.jar" />
+    </item>
+    <item
+        jar="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/exploded-aar/Demo/react-native-image-zoom/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ed10057db33374e1f69adfa1950bfb6d8f00d295">
+        <dex dex="/home/uiprj/react-native/app/Demo/android/app/build/intermediates/pre-dexed/debug/Demo-react-native-image-zoom-unspecified_634a0995a3666a7f600fe0b1f95fb56cf123cfa9.jar" />
+    </item>
+
+</items>
